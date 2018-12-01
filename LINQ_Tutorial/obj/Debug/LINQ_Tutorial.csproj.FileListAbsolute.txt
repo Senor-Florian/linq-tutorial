@@ -1,0 +1,7 @@
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\bin\Debug\LINQ_Tutorial.exe.config
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\bin\Debug\LINQ_Tutorial.exe
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\bin\Debug\LINQ_Tutorial.pdb
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\obj\Debug\LINQ_Tutorial.csprojResolveAssemblyReference.cache
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\obj\Debug\LINQ_Tutorial.csproj.CoreCompileInputs.cache
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\obj\Debug\LINQ_Tutorial.exe
+D:\repos\linq\LINQ_Tutorial\LINQ_Tutorial\obj\Debug\LINQ_Tutorial.pdb
