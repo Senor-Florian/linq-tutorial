@@ -13,10 +13,12 @@ namespace LINQ_Tutorial
         public string LoginName { get; set; }
         public string FullName { get; set; }
         public UserRole UserRole { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public List<string> Hobbies { get; set; } = new List<string>();
 
         public override string ToString()
         {
-            return "Login name: " + LoginName + ", FullName: " + FullName + ", User role: " + UserRole.ToString();
+            return "Login name: " + LoginName + ", FullName: " + FullName + ", User role: " + UserRole.ToString() + ", Date of birth: " + DateOfBirth;
         }
     }
 }
