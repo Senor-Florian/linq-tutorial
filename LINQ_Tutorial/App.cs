@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ_Tutorial.MockData;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -57,7 +58,8 @@ namespace LINQ_Tutorial {
             // Calculates the sum of integers
             var sum = integers.Aggregate((a, b) => a + b);
 
-            Console.WriteLine("Aggregate: \n" + sum);
+            Console.WriteLine("Aggregate:");
+            Console.WriteLine(sum);
         }
 
         // All
@@ -67,7 +69,8 @@ namespace LINQ_Tutorial {
             // Checks if all integers are positive in the list
             var allPositives = integers.All(i => i > 0);
 
-            Console.WriteLine("All: \n" + allPositives);
+            Console.WriteLine("All:");
+            Console.WriteLine(allPositives);
         }
 
         // Any
@@ -76,7 +79,8 @@ namespace LINQ_Tutorial {
         {
             // Checks if there are any negative integers in the lsit
             var isAnyNegative = integers.All(i => i < 0);
-            Console.WriteLine("Any: \n" + isAnyNegative);
+            Console.WriteLine("Any:");
+            Console.WriteLine(isAnyNegative);
         }
 
         // AsEnumberable
@@ -94,7 +98,8 @@ namespace LINQ_Tutorial {
         {
             // Returns the average of the integers
             var average = integers.Average();
-            Console.WriteLine("Average: \n" + average);
+            Console.WriteLine("Average:");
+            Console.WriteLine(average);
             
         }
 
@@ -123,7 +128,8 @@ namespace LINQ_Tutorial {
         public static void LinqContains(List<string> names)
         {
             var containsName = names.Contains("Alizaunder Bonauiti");
-            Console.WriteLine("Contains: \n" + containsName);
+            Console.WriteLine("Contains:");
+            Console.WriteLine(containsName);
         }
 
         // Count / LongCount
@@ -132,7 +138,8 @@ namespace LINQ_Tutorial {
         {
             // Returns the number of the names from list that are longer than 15 characters
             var longNameCount = names.Count(n => n.Count() > 15);
-            Console.WriteLine("Count: \n" + longNameCount);
+            Console.WriteLine("Count:");
+            Console.WriteLine(longNameCount);
         }
 
         // DefaultIfEmpty

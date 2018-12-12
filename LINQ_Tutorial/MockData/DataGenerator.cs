@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ_Tutorial
+namespace LINQ_Tutorial.MockData
 {
     public class DataGenerator
     {
