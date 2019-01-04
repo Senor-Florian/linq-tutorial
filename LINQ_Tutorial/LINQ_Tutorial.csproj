@@ -42,12 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregation.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="Concatenation.cs" />
+    <Compile Include="Converting.cs" />
+    <Compile Include="Elements.cs" />
+    <Compile Include="Equality.cs" />
+    <Compile Include="Filtering.cs" />
+    <Compile Include="Generation.cs" />
+    <Compile Include="Grouping.cs" />
+    <Compile Include="Join.cs" />
     <Compile Include="MockData\DataGenerator.cs" />
     <Compile Include="MockData\Institution.cs" />
+    <Compile Include="Partitioning.cs" />
+    <Compile Include="Projection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MockData\User.cs" />
     <Compile Include="MockData\UserRole.cs" />
+    <Compile Include="Quantifiers.cs" />
+    <Compile Include="Sets.cs" />
+    <Compile Include="Sorting.cs" />
+    <Compile Include="Zip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
