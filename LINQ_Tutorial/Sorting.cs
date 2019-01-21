@@ -25,8 +25,6 @@ namespace LINQ_Tutorial
             }
         }
 
-        // TODO: query implementation
-
         // Reverse
         // Reverses the order of the elements in a collection
         public static void LinqReverse(List<int> integers)

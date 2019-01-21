@@ -29,8 +29,8 @@ namespace LINQ_Tutorial
         // Returns values from the collection based on a predicate function
         public static void LinqWhere(List<User> users)
         {
-            // Returns the users who where born in 1980 or after
-            var filteredUsers = users.Where(u => u.DateOfBirth >= Convert.ToDateTime("1980-01-01"));
+            // Returns the users who are doctors
+            var filteredUsers = users.Where(u => u.UserRole == UserRole.DOCTOR);
             Console.WriteLine("Where");
             foreach (var u in filteredUsers)
             {
