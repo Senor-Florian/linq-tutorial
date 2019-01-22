@@ -14,7 +14,7 @@ namespace LINQ_Tutorial {
 
     public class App {
 
-        private static string connectionString = @"asd";
+        private static string connectionString = @"connection";
 
         public async static Task Main(string[] args)
         {
@@ -25,26 +25,59 @@ namespace LINQ_Tutorial {
                 var repository = new Repository(connection);
 
                 #region Sorting
+                Console.WriteLine("<<< 1 SORTING >>>");
                 var users = await repository.SortUsers();
                 // OrderBy
-                Console.WriteLine(JsonConvert.SerializeObject(users));
+                Console.WriteLine("<< 1.1 ORDERBY >>");
+                Console.WriteLine("< 1.1.1 SQL >");
+                foreach(var user in users)
+                {
+                    Console.WriteLine(user);
+                }
+                //Console.WriteLine(JsonConvert.SerializeObject(users));
+                Console.WriteLine("< 1.1.1 LINQ >");
                 Sorting.LinqOrderBy(DataGenerator.GetUsers());
                 // Reverse
+                Console.WriteLine("<< 1.2 REVERSE >>");
+                Console.WriteLine("< 1.2.1 LINQ >");
                 Sorting.LinqReverse(DataGenerator.GetIntegerList1());
+                Console.WriteLine("------------------------------------------------------");
                 #endregion
 
                 #region Sets
-                Sets.LinqDistinct(DataGenerator.GetIntegerList1());
+                Console.WriteLine("<<< 2 SETS >>>");
+                var roles = await repository.GetUserRoles();
+                Console.WriteLine("<< 2.1 DISTINCT >>");
+                Console.WriteLine("< 2.1.1 SQL >");
+                foreach(var role in roles)
+                {
+                    Console.WriteLine(((UserRole)role).ToString());
+                }
+                Console.WriteLine("< 2.1.2 LINQ >");
+                Sets.LinqDistinct(DataGenerator.GetUsers());
+                Console.WriteLine("<< 2.2 EXCEPT >>");
+                Console.WriteLine("< 2.2.1 LINQ >");
                 Sets.LinqExcept(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
+                Console.WriteLine("<< 2.3 INTERSECT >>");
+                Console.WriteLine("< 2.3.1 LINQ >");
                 Sets.LinqIntersect(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
+                Console.WriteLine("<< 2.4 UNION >>");
+                Console.WriteLine("< 2.4.1 LINQ >");
                 Sets.LinqUnion(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
+                Console.WriteLine("------------------------------------------------------");
                 #endregion
 
                 #region Elements
+                Console.WriteLine("<<< 3 ELEMENTS >>>");
+                Console.WriteLine("<< 3.1 ELEMENTAT >>");
                 Elements.LinqElementAt(DataGenerator.GetIntegerList1());
+                Console.WriteLine("<< 3.2 FIRST >>");
                 Elements.LinqFirst(DataGenerator.GetIntegerList1());
+                Console.WriteLine("<< 3.3 LAST >>");
                 Elements.LinqLast(DataGenerator.GetIntegerList1());
+                Console.WriteLine("<< 3.4 SINGLE >>");
                 Elements.LinqSingle(DataGenerator.GetUsers(), new Guid("567b145b-876e-4e82-9071-c8a7f7c31667"), DataGenerator.GetIntegerList1());
+                Console.WriteLine("------------------------------------------------------");
                 #endregion
 
                 #region Converting

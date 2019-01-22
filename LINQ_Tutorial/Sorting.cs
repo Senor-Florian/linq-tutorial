@@ -18,7 +18,6 @@ namespace LINQ_Tutorial
                                    .ThenBy(u => u.FullName);
             sortedUsers.Reverse();
 
-            Console.WriteLine("OrderBy");
             foreach (var u in sortedUsers)
             {
                 Console.WriteLine(u);
@@ -31,11 +30,12 @@ namespace LINQ_Tutorial
         {
             var reversedIntegers = integers.AsEnumerable().Reverse();
 
-            Console.WriteLine("Reverse");
             foreach (var u in reversedIntegers)
             {
-                Console.WriteLine(u);
+                Console.Write(u + " ");
             }
+
+            Console.WriteLine();
         }
     }
 }

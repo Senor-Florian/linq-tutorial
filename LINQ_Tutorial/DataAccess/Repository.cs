@@ -27,6 +27,15 @@ namespace LINQ_Tutorial.DataAccess
             return (await _dbConnection.QueryAsync<UserPoco>(sql)).ToList();
         }
 
+        public async Task<List<int>> GetUserRoles()
+        {
+            var sql = @"SELECT DISTINCT USERROLE
+                        FROM USERS
+                        WHERE DELETED = 0";
+
+            return (await _dbConnection.QueryAsync<int>(sql)).ToList();
+        }
+
         public async Task<List<UserPoco>> FilterUsers()
         {
             var sql = @"SELECT TOP 10 ID, FULLNAME, LOGINNAME, USERROLE 
