@@ -15,8 +15,6 @@ namespace LINQ_Tutorial
         {
             // Calculates the sum of integers
             var sum = integers.Aggregate((a, b) => a + b);
-
-            Console.WriteLine("Aggregate:");
             Console.WriteLine(sum);
         }
 
@@ -26,9 +24,7 @@ namespace LINQ_Tutorial
         {
             // Returns the average of the integers
             var average = integers.Average();
-            Console.WriteLine("Average:");
             Console.WriteLine(average);
-
         }
 
         // Count / LongCount
@@ -37,7 +33,6 @@ namespace LINQ_Tutorial
         {
             // Returns the number of the names from list that are longer than 15 characters
             var nameCount = names.Count(n => n.Count() > 15);
-            Console.WriteLine("Count:");
             Console.WriteLine(nameCount);
         }
 
@@ -47,7 +42,6 @@ namespace LINQ_Tutorial
         {
             // Returns date of birth of the youngest user from the list (largest datetime value)
             var youngestUserDob = users.Max(i => i.DateOfBirth);
-            Console.WriteLine("Max:");
             Console.WriteLine(youngestUserDob);
         }
 
@@ -55,10 +49,9 @@ namespace LINQ_Tutorial
         // Returns the smalles numeric element from a collection
         public static void LinqMin(List<int> integers)
         {
-            // Returns the smallest number from the list
-            var smallestPositiveNumber = integers.Min();
-            Console.WriteLine("Min:");
-            Console.WriteLine(smallestPositiveNumber);
+            // Returns the smallest positive number from the list
+            var smallestNumber = integers.Min();
+            Console.WriteLine(smallestNumber);
         }
 
         // Sum
@@ -67,7 +60,6 @@ namespace LINQ_Tutorial
         {
             // Sums the value of the integers
             var sum = integers.Sum();
-            Console.WriteLine("Sum:");
             Console.WriteLine(sum);
         }
     }

@@ -18,36 +18,39 @@ namespace LINQ_Tutorial
             // Returns the default value if the index is out of the range
             var hundredthElement = integers.ElementAtOrDefault(100);
 
-            Console.WriteLine("ElementAt:");
+            Console.WriteLine("ELEMENTAT");
             Console.WriteLine(firstElement);
+            Console.WriteLine("ELEMENTAT_OR_DEFAULT");
             Console.WriteLine(hundredthElement);
         }
 
         // First/FirstOrDefault
         // Returns the first element of a collection, or the first element that satisfies a condition (or a default value if no such element exists.)
-        public static void LinqFirst(List<int> integers)
+        public static void LinqFirst(List<int> integers, List<User> users)
         {
-            // Returns the first negative number in the list
-            var firstNegativeNumber = integers.First(i => i < 0);
+            // Returns the first doctor user from a list
+            var firstDoctorUser = users.First(u => u.UserRole == UserRole.DOCTOR);
             // Returns the first number over 100, doesn't throw an error if none is found
             var firstNumberOverOneHundred = integers.FirstOrDefault(i => i > 100);
 
-            Console.WriteLine("First:");
-            Console.WriteLine(firstNegativeNumber);
+            Console.WriteLine("FIRST");
+            Console.WriteLine(firstDoctorUser);
+            Console.WriteLine("FIRST_OR_DEFAULT");
             Console.WriteLine(firstNumberOverOneHundred);
         }
 
         // Last/LastOrDefault
         // Returns the last element of a collection, or the last element that satisfies a condition (or a default value if no such element exists)
-        public static void LinqLast(List<int> integers)
+        public static void LinqLast(List<int> integers, List<User> users)
         {
-            // Returns the last negative number in the list
-            var lastNegativeNumber = integers.Last(i => i < 0);
+            // Returns the last doctor user from a list
+            var lastDoctorUser = users.Last(u => u.UserRole == UserRole.DOCTOR);
             // Returns the last number over 100, doesn't throw an error if none is found
             var lastNumberOverOneHundred = integers.LastOrDefault(i => i > 100);
 
-            Console.WriteLine("Last:");
-            Console.WriteLine(lastNegativeNumber);
+            Console.WriteLine("LAST");
+            Console.WriteLine(lastDoctorUser);
+            Console.WriteLine("LAST_OR_DEFAULT");
             Console.WriteLine(lastNumberOverOneHundred);
         }
 
@@ -61,8 +64,9 @@ namespace LINQ_Tutorial
             // and throws an error if multiple elements satisfy the condition
             var integerOverOneHundred = integers.SingleOrDefault(i => i > 100);
 
-            Console.WriteLine("Single:");
+            Console.WriteLine("SINGLE");
             Console.WriteLine(user.ToString());
+            Console.WriteLine("SINGLE_OR_DEFAULT");
             Console.WriteLine(integerOverOneHundred);
         }
     }

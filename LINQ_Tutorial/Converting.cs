@@ -18,18 +18,10 @@ namespace LINQ_Tutorial
         }
 
         // AsEnumberable
-        public static IEnumerable<int> LinqAsQueryable(List<int> integers)
+        public static IQueryable<int> LinqAsQueryable(List<int> integers)
         {
             // Converts the list
             return integers.AsQueryable();
-        }
-
-        // Cast
-        // Casts the elements of a collection to a specified type
-        public static IEnumerable<string> LinqCast(List<int> integers)
-        {
-            // Cast the integer list into a string list
-            return integers.Cast<string>();
         }
 
         // ToList

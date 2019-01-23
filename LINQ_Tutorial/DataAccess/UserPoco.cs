@@ -13,11 +13,12 @@ namespace LINQ_Tutorial.DataAccess
         public string LOGINNAME { get; set; }
         public string FULLNAME { get; set; }
         public int USERROLE { get; set; }
-        public int? COUNTRYCODE { get; set; }
+        public int COUNTRYCODE { get; set; }
 
         public override string ToString()
         {
-            return "Login name: " + LOGINNAME + ", FullName: " + FULLNAME + ", User role: " + ((UserRole)USERROLE).ToString();
+            return "Login name: " + LOGINNAME + ", FullName: " + FULLNAME + ", User role: " + ((UserRole)USERROLE).ToString()
+                + " , Country: " + (COUNTRYCODE != null ? ((Country)COUNTRYCODE).ToString() : "-");
         }
     }
 }

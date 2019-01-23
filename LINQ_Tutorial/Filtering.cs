@@ -10,15 +10,12 @@ namespace LINQ_Tutorial
 {
     public class Filtering
     {
-        // TODO: query implementation
-
         // OfType
         // Filters the collection based on the ability to cast an element in a collection to a specified type
         public static void LinqOfType(IList mixedList)
         {
             // Returns the integer from the list
             var integers = mixedList.OfType<int>();
-            Console.WriteLine("OfType:");
             foreach (var i in integers)
             {
                 Console.WriteLine(i);
@@ -31,7 +28,6 @@ namespace LINQ_Tutorial
         {
             // Returns the users who are doctors
             var filteredUsers = users.Where(u => u.UserRole == UserRole.DOCTOR);
-            Console.WriteLine("Where");
             foreach (var u in filteredUsers)
             {
                 Console.WriteLine(u);

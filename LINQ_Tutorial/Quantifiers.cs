@@ -14,8 +14,6 @@ namespace LINQ_Tutorial
         {
             // Checks if all integers are positive in the list
             var allPositives = integers.All(i => i > 0);
-
-            Console.WriteLine("All:");
             Console.WriteLine(allPositives);
         }
 
@@ -24,8 +22,7 @@ namespace LINQ_Tutorial
         public static void LinqAny(List<int> integers)
         {
             // Checks if there are any negative integers in the list
-            var isAnyNegative = integers.All(i => i < 0);
-            Console.WriteLine("Any:");
+            var isAnyNegative = integers.Any(i => i < 0);
             Console.WriteLine(isAnyNegative);
         }
 
@@ -34,7 +31,6 @@ namespace LINQ_Tutorial
         public static void LinqContains(List<string> names)
         {
             var containsName = names.Contains("Alizaunder Bonauiti");
-            Console.WriteLine("Contains:");
             Console.WriteLine(containsName);
         }
     }

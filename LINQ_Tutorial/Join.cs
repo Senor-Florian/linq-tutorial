@@ -16,8 +16,6 @@ namespace LINQ_Tutorial
             // Returns the name of the institutions and the users who work at them
             var groupJoin = institutions.GroupJoin(users, i => i.ID, u => u.InstitutionID, (i, u) => new { i.Name, u });
 
-            Console.WriteLine("GroupJoin:");
-
             foreach (var g in groupJoin)
             {
                 Console.WriteLine(g.Name + ":");
@@ -34,8 +32,6 @@ namespace LINQ_Tutorial
         public static void LinqJoin(List<User> users, List<Institution> institutions)
         {
             var join = users.Join(institutions, u => u.InstitutionID, i => i.ID, (u, i) => new { u.FullName, u.LoginName, i.Name });
-
-            Console.WriteLine("Join:");
 
             foreach (var j in join)
             {

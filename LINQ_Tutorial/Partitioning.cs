@@ -15,7 +15,6 @@ namespace LINQ_Tutorial
         {
             // Removes the first 5 elements of the list
             var nonSkippedNumbers = integers.Skip(5);
-            Console.WriteLine("Skip");
             foreach (var i in nonSkippedNumbers)
             {
                 Console.WriteLine(i);
@@ -29,7 +28,6 @@ namespace LINQ_Tutorial
         {
             // Skips users until it finds one with the user role of a Monitor
             var nonSkippedUsers = users.SkipWhile(u => u.UserRole != UserRole.MONITOR);
-            Console.WriteLine("SkipWhile");
             foreach (var u in nonSkippedUsers)
             {
                 Console.WriteLine(u);
@@ -38,14 +36,13 @@ namespace LINQ_Tutorial
 
         // Take
         // Takes elements up to a specified position starting from the first element in a sequence
-        public static void LinqTake(List<int> integers)
+        public static void LinqTake(List<User> users)
         {
             // Returns the first 5 elements of the list
-            var takenNumbers = integers.Take(5);
-            Console.WriteLine("Take");
-            foreach (var i in takenNumbers)
+            var takenUsers = users.Take(5);
+            foreach (var u in users)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(u);
             }
         }
 
@@ -56,7 +53,6 @@ namespace LINQ_Tutorial
         {
             // Takes users until it finds one with the user role of a Monitor
             var takenUsers = users.TakeWhile(u => u.UserRole != UserRole.MONITOR);
-            Console.WriteLine("TakeWhile");
             foreach (var u in takenUsers)
             {
                 Console.WriteLine(u);

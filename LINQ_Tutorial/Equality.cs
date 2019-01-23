@@ -15,7 +15,6 @@ namespace LINQ_Tutorial
             // Returns true because the two lists have the same elements in the same order
             var isEqual = integers.SequenceEqual(integers2);
 
-            Console.WriteLine("SequenceEqual:");
             Console.WriteLine(isEqual);
         }
     }

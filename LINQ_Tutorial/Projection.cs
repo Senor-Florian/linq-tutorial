@@ -9,8 +9,6 @@ namespace LINQ_Tutorial
 {
     public class Projection
     {
-        // TODO: query implementation
-
         // Select
         // Returns an IEnumerable collection which contains elements based on a transformation function
         public static void LinqSelect(List<User> users)
@@ -18,7 +16,6 @@ namespace LINQ_Tutorial
             // Returns the names of the users
             var userNames = users.Select(u => u.FullName);
 
-            Console.WriteLine("Select");
             foreach (var n in userNames)
             {
                 Console.WriteLine(n);
@@ -32,10 +29,8 @@ namespace LINQ_Tutorial
             // Returns a list of the hobbies of the users
             var hobbies = users.SelectMany(u => u.Hobbies);
 
-            Console.WriteLine("SelectMany");
             foreach (var h in hobbies)
             {
-
                 Console.WriteLine(h);
             }
         }

@@ -53,6 +53,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Concatenation.cs" />
     <Compile Include="Converting.cs" />
+    <Compile Include="DataAccess\Country.cs" />
     <Compile Include="DataAccess\Repository.cs" />
     <Compile Include="DataAccess\UserPoco.cs" />
     <Compile Include="Elements.cs" />

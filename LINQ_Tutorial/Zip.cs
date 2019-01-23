@@ -14,10 +14,9 @@ namespace LINQ_Tutorial
         {
             // Multiplies the respective elements of two lists
             var zippedList = integers.Zip(integers2, (a, b) => a * b);
-            Console.WriteLine("Zip:");
             foreach (var i in zippedList)
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
         }
     }

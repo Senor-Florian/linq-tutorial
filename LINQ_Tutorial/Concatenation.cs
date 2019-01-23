@@ -14,10 +14,9 @@ namespace LINQ_Tutorial
         public static void LinqConcat(List<int> integers, List<int> integers2)
         {
             var concatenation = integers.Concat(integers2);
-            Console.WriteLine("Concat:");
             foreach (var c in concatenation)
             {
-                Console.WriteLine(c);
+                Console.Write(c + " ");
             }
         }
     }

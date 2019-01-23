@@ -10,12 +10,12 @@ namespace LINQ_Tutorial
     {
         // DefaultIfEmpty
         // Returns a new collection with the default value if the given collection on which DefaultIfEmpty() is invoked is empty
-        public static void LinqDefaultIfEmpty(List<int> integers)
+        public static void LinqDefaultIfEmpty()
         {
             // Returns a list containing one element with the value of 100 if the original list is empty
-            var filtered = integers.Where(i => i > 100).DefaultIfEmpty(100);
+            var integers = new List<int>();
+            var filtered = integers.DefaultIfEmpty(100);
 
-            Console.WriteLine("DefaultIfEmpty:");
             foreach (var i in filtered)
             {
                 Console.WriteLine(i);
