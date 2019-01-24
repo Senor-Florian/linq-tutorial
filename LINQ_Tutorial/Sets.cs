@@ -24,10 +24,11 @@ namespace LINQ_Tutorial
         // Returns a new collection with elements from the first collection which do not exist in the second collection
         public static void LinqExcept(List<int> integers, List<int> integers2)
         {
+            Console.WriteLine("Különbség lista");
             var except = integers.Except(integers2);
-            foreach (var i in except)
+            foreach (var e in except)
             {
-                Console.Write(i + " ");
+                Console.Write(e + " ");
             }
             Console.WriteLine();
         }
@@ -38,6 +39,7 @@ namespace LINQ_Tutorial
         {
             // Return a list with only the numbers that are present in both lists
             // Even if a value is present multiple times in both collections, there's only one instance of it in the intersected collection
+            Console.WriteLine("Metszet lista");
             var intersect = integers.Intersect(integers2);
             foreach (var i in intersect)
             {
@@ -50,7 +52,8 @@ namespace LINQ_Tutorial
         // Requires two collections and returns a new collection that includes distinct elements from both the collections
         public static void LinqUnion(List<int> integers, List<int> integers2)
         {
-            // Returns the combineD, distinct values of the two integer lists
+            // Returns the combined, distinct values of the two integer lists
+            Console.WriteLine("Unió lista");
             var union = integers.Union(integers2);
             foreach (var i in union)
             {

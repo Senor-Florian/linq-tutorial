@@ -44,15 +44,6 @@ namespace LINQ_Tutorial.DataAccess
                         WHERE DELETED = 0 AND USERROLE = @userRole";
             return (await _dbConnection.QueryAsync<UserPoco>(sql, new { userRole = (int)UserRole.DOCTOR })).SingleOrDefault();
         }
-
-        public async Task<UserPoco> GetLastDoctorUser()
-        {
-            var sql = @"SELECT TOP 1 FULLNAME, LOGINNAME, USERROLE
-                        FROM USERS
-                        WHERE DELETED = 0 AND USERROLE = @userRole
-                        ORDER BY USERROLE DESC";
-            return (await _dbConnection.QueryAsync<UserPoco>(sql, new { userRole = (int)UserRole.DOCTOR })).SingleOrDefault();
-        }
         //FILTERING
         public async Task<List<UserPoco>> GetDoctorUsers()
         {

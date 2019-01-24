@@ -9,6 +9,18 @@ namespace LINQ_Tutorial
 {
     public class Join
     {
+        // Join
+        // Joins two sequences (collections) based on a key and returns a resulted sequence
+        public static void LinqJoin(List<User> users, List<Institution> institutions)
+        {
+            var join = users.Join(institutions, u => u.InstitutionID, i => i.ID, (u, i) => new { u.FullName, u.LoginName, i.Name });
+
+            foreach (var j in join)
+            {
+                Console.WriteLine(string.Join(", ", new List<string>() { j.FullName, j.LoginName, j.Name }));
+            }
+        }
+
         // GroupJoin
         // Joins two sequences based on key and groups the result by matching key and then returns the collection of grouped result and key
         public static void LinqGroupJoin(List<User> users, List<Institution> institutions)
@@ -23,19 +35,6 @@ namespace LINQ_Tutorial
                 {
                     Console.WriteLine(string.Join(", ", new List<string>() { u.FullName, u.LoginName }));
                 }
-
-            }
-        }
-
-        // Join
-        // Joins two sequences (collections) based on a key and returns a resulted sequence
-        public static void LinqJoin(List<User> users, List<Institution> institutions)
-        {
-            var join = users.Join(institutions, u => u.InstitutionID, i => i.ID, (u, i) => new { u.FullName, u.LoginName, i.Name });
-
-            foreach (var j in join)
-            {
-                Console.WriteLine(string.Join(", ", new List<string>() { j.FullName, j.LoginName, j.Name }));
             }
         }
     }

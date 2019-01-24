@@ -48,7 +48,6 @@ namespace LINQ_Tutorial
         {
             // Creates a dictionary from the user list where they keys are Guids and the values are the users themselves
             IDictionary<Guid, User> usersDictionary = users.ToDictionary<User, Guid>(u => u.ID);
-            Console.WriteLine("ToDictionary:");
             foreach (var key in usersDictionary.Keys)
             {
                 Console.WriteLine("Key: " + key + ", " + usersDictionary[key]);

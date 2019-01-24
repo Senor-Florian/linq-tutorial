@@ -30,11 +30,18 @@ namespace LINQ_Tutorial
         {
             var reversedIntegers = integers.AsEnumerable().Reverse();
 
-            foreach (var u in reversedIntegers)
+            Console.WriteLine("Eredeti lista");
+            foreach (var i in integers)
             {
-                Console.Write(u + " ");
+                Console.Write(i + " ");
             }
+            Console.WriteLine();
 
+            Console.WriteLine("Megfordított lista");
+            foreach (var r in reversedIntegers)
+            {
+                Console.Write(r + " ");
+            }
             Console.WriteLine();
         }
     }

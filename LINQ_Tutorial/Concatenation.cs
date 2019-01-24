@@ -18,6 +18,8 @@ namespace LINQ_Tutorial
             {
                 Console.Write(c + " ");
             }
+
+            Console.WriteLine();
         }
     }
 }

@@ -18,9 +18,9 @@ namespace LINQ_Tutorial
             // Returns the default value if the index is out of the range
             var hundredthElement = integers.ElementAtOrDefault(100);
 
-            Console.WriteLine("ELEMENTAT");
+            Console.WriteLine("ELEMENTAT(0)");
             Console.WriteLine(firstElement);
-            Console.WriteLine("ELEMENTAT_OR_DEFAULT");
+            Console.WriteLine("ELEMENTAT_OR_DEFAULT(100)");
             Console.WriteLine(hundredthElement);
         }
 
@@ -33,9 +33,9 @@ namespace LINQ_Tutorial
             // Returns the first number over 100, doesn't throw an error if none is found
             var firstNumberOverOneHundred = integers.FirstOrDefault(i => i > 100);
 
-            Console.WriteLine("FIRST");
+            Console.WriteLine("FIRST(doctor)");
             Console.WriteLine(firstDoctorUser);
-            Console.WriteLine("FIRST_OR_DEFAULT");
+            Console.WriteLine("FIRST_OR_DEFAULT(i > 100)");
             Console.WriteLine(firstNumberOverOneHundred);
         }
 
@@ -48,9 +48,9 @@ namespace LINQ_Tutorial
             // Returns the last number over 100, doesn't throw an error if none is found
             var lastNumberOverOneHundred = integers.LastOrDefault(i => i > 100);
 
-            Console.WriteLine("LAST");
+            Console.WriteLine("LAST(doctor)");
             Console.WriteLine(lastDoctorUser);
-            Console.WriteLine("LAST_OR_DEFAULT");
+            Console.WriteLine("LAST_OR_DEFAULT(i > 100)");
             Console.WriteLine(lastNumberOverOneHundred);
         }
 
@@ -64,9 +64,9 @@ namespace LINQ_Tutorial
             // and throws an error if multiple elements satisfy the condition
             var integerOverOneHundred = integers.SingleOrDefault(i => i > 100);
 
-            Console.WriteLine("SINGLE");
+            Console.WriteLine("SINGLE(id)");
             Console.WriteLine(user.ToString());
-            Console.WriteLine("SINGLE_OR_DEFAULT");
+            Console.WriteLine("SINGLE_OR_DEFAULT(i > 100)");
             Console.WriteLine(integerOverOneHundred);
         }
     }

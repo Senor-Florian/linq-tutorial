@@ -10,7 +10,7 @@ namespace LINQ_Tutorial
     public class Grouping
     {
         // GroupBy
-        // Returns groups of elements based on some key value
+        // Groups elements of a sequence that share a common attribute
         public static void LinqGroupBy(List<User> users)
         {
             // Groups the users by their role

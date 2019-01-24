@@ -18,6 +18,7 @@ namespace LINQ_Tutorial
             {
                 Console.Write(i + " ");
             }
+            Console.WriteLine();
         }
     }
 }

@@ -17,8 +17,10 @@ namespace LINQ_Tutorial
             var nonSkippedNumbers = integers.Skip(5);
             foreach (var i in nonSkippedNumbers)
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
+
+            Console.WriteLine();
         }
 
         // SkipWhile
