@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -13,16 +11,11 @@ namespace LINQ_Tutorial
         // Groups elements of a sequence that share a common attribute
         public static void LinqGroupBy(List<User> users)
         {
-            // Groups the users by their role
+            // Csoportosít egy collection-t a megadott property alapján
+            // Példa: a felhasználók csoportosítva lettek role alapján
+            // olyan adathalmazt eredményezve, melynek minden eleme rendelkezik egy kulccsal, aminek értéke a csoportosítást meghatározó property (role) éréke,
+            // illetve egy collection-t, amiben a csoportosított elemek (felhasználók) vannak
             var groupedUsers = users.GroupBy(u => u.UserRole);
-            foreach (var g in groupedUsers)
-            {
-                Console.WriteLine("---" + g.Key + "---");
-                foreach (var u in g)
-                {
-                    Console.WriteLine(u.ToString());
-                }
-            }
         }
 
         // ToLookUp
@@ -31,16 +24,9 @@ namespace LINQ_Tutorial
         // ToLookup is the same as GroupBy, the only difference is the execution of GroupBy is deferred whereas ToLookup execution is immediate
         public static void LinqToLookUp(List<User> users)
         {
-            // Groups the users by their role
+            // Működésben nagyon hasonló a GroupBy-hoz
+            // Különbség: a ToLookup kiértékelése azonnali, a GroupBy kiértékelése késleltetett 
             ILookup<UserRole, User> groupedUsers = users.ToLookup(u => u.UserRole);
-            foreach (var g in groupedUsers)
-            {
-                Console.WriteLine("---" + g.Key + "---");
-                foreach (var u in g)
-                {
-                    Console.WriteLine(u.ToString());
-                }
-            }
         }
     }
 }

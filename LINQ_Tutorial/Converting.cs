@@ -1,10 +1,7 @@
 ﻿using LINQ_Tutorial.MockData;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -13,14 +10,14 @@ namespace LINQ_Tutorial
         // AsEnumberable
         public static IEnumerable<int> LinqAsEnumberable(List<int> integers)
         {
-            // Converts the list
+            // IEnumberable-t ad vissza az eredeti helyett 
             return integers.AsEnumerable();
         }
 
-        // AsEnumberable
+        // AsQueryable
         public static IQueryable<int> LinqAsQueryable(List<int> integers)
         {
-            // Converts the list
+            // IQueryable-t ad vissza az eredeti helyett 
             return integers.AsQueryable();
         }
 
@@ -28,7 +25,7 @@ namespace LINQ_Tutorial
         // Converts collection to List
         public static List<string> LinqToList(List<string> names)
         {
-            // Converts an array to a list
+            // Listává alakítja az eredeti collectiont
             var nameArray = names.ToArray();
             return nameArray.ToList();
         }
@@ -37,7 +34,7 @@ namespace LINQ_Tutorial
         // Converts collection to array
         public static string[] LinqToArray(List<string> names)
         {
-            // Converts a list to an array
+            // Tömbbé alakítja az eredeti collectiont
             var nameArray = names.AsEnumerable().ToArray();
             return nameArray;
         }
@@ -46,12 +43,8 @@ namespace LINQ_Tutorial
         // Puts elements into a Dictionary based on key selector function
         public static void LinqToDictionary(List<User> users)
         {
-            // Creates a dictionary from the user list where they keys are Guids and the values are the users themselves
-            IDictionary<Guid, User> usersDictionary = users.ToDictionary<User, Guid>(u => u.ID);
-            foreach (var key in usersDictionary.Keys)
-            {
-                Console.WriteLine("Key: " + key + ", " + usersDictionary[key]);
-            }
+            // Egy collectionből dictionary-t készít
+            IDictionary<Guid, User> usersDictionary = users.ToDictionary(u => u.ID);
         }
     }
 }

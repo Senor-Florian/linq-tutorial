@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -12,14 +9,10 @@ namespace LINQ_Tutorial
         // Returns a new collection with the default value if the given collection on which DefaultIfEmpty() is invoked is empty
         public static void LinqDefaultIfEmpty()
         {
-            // Returns a list containing one element with the value of 100 if the original list is empty
+            // Visszatér az eredeti collection elemeivel, ha az nem üres
+            // Ha üres, akkor visszatér egy egy elemű listával, melynek értéke az elem típusának default értéke, vagy a paraméterben megadott érték
             var integers = new List<int>();
-            var filtered = integers.DefaultIfEmpty(100);
-
-            foreach (var i in filtered)
-            {
-                Console.WriteLine(i);
-            }
+            var filtered = integers.DefaultIfEmpty();
         }
     }
 }

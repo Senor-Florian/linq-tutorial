@@ -126,7 +126,7 @@ namespace LINQ_Tutorial.MockData
                 "eloquence",
                 78,
                 3.8,
-                new User() {
+                new User {
                     FullName = "Virus Kunz"
                 }
             };

@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -13,29 +11,22 @@ namespace LINQ_Tutorial
         // Joins two sequences (collections) based on a key and returns a resulted sequence
         public static void LinqJoin(List<User> users, List<Institution> institutions)
         {
+            // Két collection-t összekapcsol egy kulcs alapján
+            // Példa: a felhasználókat összekapcsolja a hozzájuk tartozó intéznménnyel, és visszaad egy olyan anonymous object
+            // listát, amely mindkét osztályból tartalmaz property-ket
             var join = users.Join(institutions, u => u.InstitutionID, i => i.ID, (u, i) => new { u.FullName, u.LoginName, i.Name });
-
-            foreach (var j in join)
-            {
-                Console.WriteLine(string.Join(", ", new List<string>() { j.FullName, j.LoginName, j.Name }));
-            }
         }
 
         // GroupJoin
         // Joins two sequences based on key and groups the result by matching key and then returns the collection of grouped result and key
         public static void LinqGroupJoin(List<User> users, List<Institution> institutions)
         {
-            // Returns the name of the institutions and the users who work at them
+            // Két collection-t összekapcsol egy kulcs alapján, és csoportosít (group)
+            // Példa: az intézményeket összekapcsolja a hozzájuk tartozó felhasználókkal (felhasználó collection),
+            // és visszaad egy olyan listát, amely tartalmazza az intézmények neveit és egy listában az ott dolgozó felhasználókat
             var groupJoin = institutions.GroupJoin(users, i => i.ID, u => u.InstitutionID, (i, u) => new { i.Name, u });
-
-            foreach (var g in groupJoin)
-            {
-                Console.WriteLine(g.Name + ":");
-                foreach (var u in g.u)
-                {
-                    Console.WriteLine(string.Join(", ", new List<string>() { u.FullName, u.LoginName }));
-                }
-            }
         }
+
+        // TODO: gyakorló feladat
     }
 }

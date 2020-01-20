@@ -1,9 +1,6 @@
 ﻿using LINQ_Tutorial.MockData;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -13,36 +10,28 @@ namespace LINQ_Tutorial
         // Arranges the elements of the collection in ascending or descending order
         public static void LinqOrderBy(List<User> users)
         {
-            // Orders the users first by their role, then by their fullname
+            // Rendezi az elemeket egy vag több szempont szerint
+            // OrderBy: rendez egy szempont szerint
+            // ThenBy: az előző rendezés szerint azonos pozicióban lévő elemeket tovább rendezi egy újabb szempont szerint
             var sortedUsers = users.OrderBy(u => u.UserRole.ToString())
-                                   .ThenBy(u => u.FullName);
-            sortedUsers.Reverse();
+                                   .ThenBy(u => u.FullName)
+                                   .ThenByDescending(u => u.LoginName);
 
-            foreach (var u in sortedUsers)
-            {
-                Console.WriteLine(u);
-            }
+            // OrderBy/ThenBy: növekvő
+            // OrderByDescending/ThenByDescending: csökkenő
         }
 
         // Reverse
         // Reverses the order of the elements in a collection
-        public static void LinqReverse(List<int> integers)
+        public static void LinqReverse(IEnumerable<int> integers)
         {
-            var reversedIntegers = integers.AsEnumerable().Reverse();
-
-            Console.WriteLine("Eredeti lista");
-            foreach (var i in integers)
-            {
-                Console.Write(i + " ");
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("Megfordított lista");
-            foreach (var r in reversedIntegers)
-            {
-                Console.Write(r + " ");
-            }
-            Console.WriteLine();
+            // Megfordítja az elemek sorrendjét
+            integers.Reverse();
         }
+
+        // Gyakorlás
+
+        // 1.
+        // Rendezzük a felhasználókat először név szerint növekvő, majd születési dátum szerint csökkenő sorrendbe.
     }
 }

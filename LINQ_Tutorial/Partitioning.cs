@@ -13,14 +13,8 @@ namespace LINQ_Tutorial
         // Skips elements up to a specified position starting from the first element in a sequence
         public static void LinqSkip(List<int> integers)
         {
-            // Removes the first 5 elements of the list
+            // Visszad egy olyan collection-t, amely nem tartalmazza az eredeti collection első x elemét
             var nonSkippedNumbers = integers.Skip(5);
-            foreach (var i in nonSkippedNumbers)
-            {
-                Console.Write(i + " ");
-            }
-
-            Console.WriteLine();
         }
 
         // SkipWhile
@@ -28,24 +22,16 @@ namespace LINQ_Tutorial
         // If the first element itself doesn't satisfy the condition, it then skips 0 elements and returns all the elements in the sequence
         public static void LinqSkipWhile(List<User> users)
         {
-            // Skips users until it finds one with the user role of a Monitor
+            // Kihagyja az új collection-ből az eredeti elemeit, amíg a megadott feltétel teljesül
             var nonSkippedUsers = users.SkipWhile(u => u.UserRole != UserRole.MONITOR);
-            foreach (var u in nonSkippedUsers)
-            {
-                Console.WriteLine(u);
-            }
         }
 
         // Take
         // Takes elements up to a specified position starting from the first element in a sequence
         public static void LinqTake(List<User> users)
         {
-            // Returns the first 5 elements of the list
+            // Visszad egy olyan collection-t, amely tartalmazza az eredeti collection első x elemét
             var takenUsers = users.Take(5);
-            foreach (var u in users)
-            {
-                Console.WriteLine(u);
-            }
         }
 
         // TakeWhile
@@ -53,12 +39,15 @@ namespace LINQ_Tutorial
         // If the first element itself doesn't satisfy the condition then returns an empty collection. 
         public static void LinqTakeWhile(List<User> users)
         {
-            // Takes users until it finds one with the user role of a Monitor
+            // Tartalmazza az új collection az eredeti elemeit, amíg a megadott feltétel teljesül
             var takenUsers = users.TakeWhile(u => u.UserRole != UserRole.MONITOR);
-            foreach (var u in takenUsers)
-            {
-                Console.WriteLine(u);
-            }
         }
+
+        // Gyakorlás
+
+        // 1.
+        // Oldalunkon szeretnénk paginálva megjeleníteni egy listában a felhasználókat, mert lassú lenne, ha a backend mindig visszaadná az összeset.
+        // Írjunk egy metódust, amely visszaadja az adott oldalon megjelenítendő felhasználókat úgy, hogy megkapja az oldal számát és az oldalon
+        // megjelenítendő felhasználók számát.      
     }
 }

@@ -1,10 +1,7 @@
 ﻿using LINQ_Tutorial.MockData;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -14,24 +11,24 @@ namespace LINQ_Tutorial
         // Filters the collection based on the ability to cast an element in a collection to a specified type
         public static void LinqOfType(IList mixedList)
         {
-            // Returns the integer from the list
+            // Visszaad egy olyan collectiont, ami csak a megadott típusú elemeket tartalmazza az eredeti collectionből
             var integers = mixedList.OfType<int>();
-            foreach (var i in integers)
-            {
-                Console.WriteLine(i);
-            }
         }
 
         // Where
         // Returns values from the collection based on a predicate function
         public static void LinqWhere(List<User> users)
         {
-            // Returns the users who are doctors
+            // Visszaad egy olyan collectiont, ami a megadott feltételnek megfelelő elemeket tartalmazza az eredeti collectionből
             var filteredUsers = users.Where(u => u.UserRole == UserRole.DOCTOR);
-            foreach (var u in filteredUsers)
-            {
-                Console.WriteLine(u);
-            }
         }
+
+        // Gyakorlás
+
+        // 1.
+        // Adjuk vissza azokat a felhasználókat, akik 1980-01-01 után születtek
+
+        // 2.
+        // Adjuk vissza azokat a felhasználókat, akiknek 2-nél több hobbija van
     }
 }
