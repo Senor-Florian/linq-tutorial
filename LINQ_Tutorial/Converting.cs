@@ -44,7 +44,7 @@ namespace LINQ_Tutorial
         public static void LinqToDictionary(List<User> users)
         {
             // Egy collectionből dictionary-t készít
-            IDictionary<Guid, User> usersDictionary = users.ToDictionary(u => u.ID);
+            IDictionary<Guid, User> usersDictionary = users.ToDictionary(u => u.Id);
         }
     }
 }

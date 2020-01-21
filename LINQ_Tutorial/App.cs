@@ -1,7 +1,6 @@
 ﻿using LINQ_Tutorial.MockData;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace LINQ_Tutorial
 {
@@ -189,7 +188,6 @@ namespace LINQ_Tutorial
             #region Equality
             Console.WriteLine("<<< 13 EQUALITY >>>");
             Console.WriteLine("<< 13.1 SEQUENCE_EQUAL >>");
-            Console.WriteLine("< 13.1.1 LINQ >");
             Equality.LinqSequenceEqual(DataGenerator.GetIntegerList2(), DataGenerator.GetIntegerList3());
             Console.WriteLine("-------------------------------------------------------------------------");
             Console.ReadKey();
@@ -197,22 +195,8 @@ namespace LINQ_Tutorial
             #endregion
 
             #region Concatenation
-            Console.WriteLine("1-es lista");
-            foreach (var i in DataGenerator.GetIntegerList1())
-            {
-                Console.Write(i + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine("2-es lista");
-            foreach (var i in DataGenerator.GetIntegerList2())
-            {
-                Console.Write(i + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------------------------------------------");
             Console.WriteLine("<<< 14 CONCATENATION >>>");
             Console.WriteLine("<< 14.1 CONCAT >>");
-            Console.WriteLine("< 14.1.1 LINQ >");
             Concatenation.LinqConcat(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
             Console.WriteLine("-------------------------------------------------------------------------");
             Console.ReadKey();
@@ -220,22 +204,10 @@ namespace LINQ_Tutorial
             #endregion
 
             #region Zip
-            Console.WriteLine("1-es lista");
-            foreach (var i in DataGenerator.GetIntegerList1())
-            {
-                Console.Write(i + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine("2-es lista");
-            foreach (var i in DataGenerator.GetIntegerList2())
-            {
-                Console.Write(i + " ");
-            }
             Console.WriteLine();
             Console.WriteLine("-------------------------------------------------------------------------");
             Console.WriteLine("<<< 15 ZIP >>>");
             Console.WriteLine("<< 15.1 ZIP >>");
-            Console.WriteLine("< 15.1.1 LINQ >");
             Zip.LinqZip(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
             Console.WriteLine("-------------------------------------------------------------------------");
             #endregion

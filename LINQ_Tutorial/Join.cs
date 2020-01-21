@@ -1,5 +1,4 @@
 ﻿using LINQ_Tutorial.MockData;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,7 +13,7 @@ namespace LINQ_Tutorial
             // Két collection-t összekapcsol egy kulcs alapján
             // Példa: a felhasználókat összekapcsolja a hozzájuk tartozó intéznménnyel, és visszaad egy olyan anonymous object
             // listát, amely mindkét osztályból tartalmaz property-ket
-            var join = users.Join(institutions, u => u.InstitutionID, i => i.ID, (u, i) => new { u.FullName, u.LoginName, i.Name });
+            var join = users.Join(institutions, u => u.InstitutionID, i => i.Id, (u, i) => new { u.FullName, u.LoginName, i.Name });
         }
 
         // GroupJoin
@@ -24,9 +23,13 @@ namespace LINQ_Tutorial
             // Két collection-t összekapcsol egy kulcs alapján, és csoportosít (group)
             // Példa: az intézményeket összekapcsolja a hozzájuk tartozó felhasználókkal (felhasználó collection),
             // és visszaad egy olyan listát, amely tartalmazza az intézmények neveit és egy listában az ott dolgozó felhasználókat
-            var groupJoin = institutions.GroupJoin(users, i => i.ID, u => u.InstitutionID, (i, u) => new { i.Name, u });
+            var groupJoin = institutions.GroupJoin(users, i => i.Id, u => u.InstitutionID, (i, u) => new { i.Name, u });
         }
 
-        // TODO: gyakorló feladat
+        // Gyakorlás
+
+        // 1.
+        // Kapcsoljuk össze azokat a felhasználókat a címűkkel, akiknek van AddressId-ja, és adjuk
+        // vissza egy olyan collectiont, ami tartalmazza felhasználók nevét, a címük országát és megyéjét.
     }
 }

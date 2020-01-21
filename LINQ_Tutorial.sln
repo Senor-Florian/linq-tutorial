@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_Tutorial", "LINQ_Tutorial\LINQ_Tutorial.csproj", "{9A9EACA2-6122-48F4-B568-C5AEAEFC70F1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD33C74B-0852-44FD-AF9E-6A62FADDDC92}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_Tutorial", "LINQ_Tutorial\LINQ_Tutorial.csproj", "{DCB8ABB5-56B7-484B-A294-C075AADAEB6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A9EACA2-6122-48F4-B568-C5AEAEFC70F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A9EACA2-6122-48F4-B568-C5AEAEFC70F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A9EACA2-6122-48F4-B568-C5AEAEFC70F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A9EACA2-6122-48F4-B568-C5AEAEFC70F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB8ABB5-56B7-484B-A294-C075AADAEB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB8ABB5-56B7-484B-A294-C075AADAEB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB8ABB5-56B7-484B-A294-C075AADAEB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB8ABB5-56B7-484B-A294-C075AADAEB6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

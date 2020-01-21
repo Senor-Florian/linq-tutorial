@@ -28,5 +28,10 @@ namespace LINQ_Tutorial
             // Különbség: a ToLookup kiértékelése azonnali, a GroupBy kiértékelése késleltetett 
             ILookup<UserRole, User> groupedUsers = users.ToLookup(u => u.UserRole);
         }
+
+        // Gyakorlás
+
+        // 1.
+        // Csoportosítsuk a felhasználókat születési évük szerint.
     }
 }

@@ -47,7 +47,7 @@ namespace LINQ_Tutorial
         {
             // Visszaadja az egyetlen olyan elemet, amelyre teljesül a feltétel
             // Hibát dob, ha üres a lista, egyik elemre se teljesül a fetétel, vagy több elemre is teljesül
-            var user = users.Single(u => u.ID == id);
+            var user = users.Single(u => u.Id == id);
             // Visszaadja az egyetlen olyan elemet, amelyre teljesül a feltétel
             // Nem dob hibát, ha üres a lista, vagy egyetlen elemre se teljesül a feltétel
             // Hibát dob, ha több elemre teljesül a feltétel

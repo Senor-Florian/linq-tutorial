@@ -5,8 +5,9 @@ namespace LINQ_Tutorial.MockData
 {
     public class User
     {
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public Guid InstitutionID { get; set; }
+        public Guid? AddressId { get; set; }
         public string LoginName { get; set; }
         public string FullName { get; set; }
         public UserRole UserRole { get; set; }

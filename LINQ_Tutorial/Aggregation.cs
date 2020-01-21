@@ -33,6 +33,8 @@ namespace LINQ_Tutorial
             // Visszaadja egy lista elemeinek számát, illetve azon elemek számát, melyek megfelelnek az adott feltételnek
             var intCount = integers.Count(i => i > 15);
             var intCount2 = integers.Count();
+            // Count() => intet ad vissza
+            // LongCount() => longot ad vissza
         }
 
         // Max
