@@ -11,8 +11,8 @@ namespace LINQ_Tutorial
         // Performs a custom aggregation operation on the values in the collection
         public static void LinqAggregate(List<int> integers)
         {
-            // A collection minden egyes eleme esetén elvégzi a megadott műveletet az adott elemmel és az előző elem esetén elvégzett művelet eredményével
-            // Példa: egy integer lista elemeit összegezhetjük, az aktuális elemet mindig hozzáadja a korábbi elemek összegéhez
+            // A collection minden egyes eleme esetén elvégzi a megadott műveletet az adott elemmel és az előző elem esetén elvégzett művelet eredményével.
+            // Példa: egy integer lista elemeit összegezhetjük, az aktuális elemet mindig hozzáadja a korábbi elemek összegéhez.
             var sum = integers.Aggregate((a, b) => a + b);
         }
 
@@ -23,7 +23,6 @@ namespace LINQ_Tutorial
             // Átlagolja a collection elemeinek értékét
             // Csak numerikus típusok esetén használható
             var average = integers.Average();
-            Console.WriteLine(average);
         }
 
         // Count / LongCount
@@ -46,7 +45,7 @@ namespace LINQ_Tutorial
         }
 
         // Min
-        // Returns the smalles numeric element from a collection
+        // Returns the smallest numeric element from a collection
         public static void LinqMin(List<int> integers)
         {
             // Visszaadja a legkisebb értékű elemet a listából
@@ -70,6 +69,6 @@ namespace LINQ_Tutorial
         // Számoljuk össze, hogy egy neveket tartalmazó string lista hány eleme hosszabb 10 karakternél
 
         // 3.
-        // Keressük meg a felhasználók közül a legöregebbet
+        // Keressük meg a felhasználók közül a legöregebb születési dátumát
     }
 }

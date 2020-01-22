@@ -26,9 +26,9 @@ namespace LINQ_Tutorial
         // Gyakorlás
 
         // 1.
-        // Adjuk vissza azokat a felhasználókat, akik 1980-01-01 után születtek
+        // Adjuk vissza azokat a felhasználókat, akik 1980-01-01 után születtek.
 
         // 2.
-        // Adjuk vissza azokat a felhasználókat, akiknek 2-nél több hobbija van
+        // Adjuk vissza azokat a felhasználókat, akiknek 2-nél több hobbija van.
     }
 }

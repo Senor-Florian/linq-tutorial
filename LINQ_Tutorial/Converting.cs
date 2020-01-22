@@ -23,11 +23,10 @@ namespace LINQ_Tutorial
 
         // ToList
         // Converts collection to List
-        public static List<string> LinqToList(List<string> names)
+        public static List<string> LinqToList(string[] names)
         {
             // Listává alakítja az eredeti collectiont
-            var nameArray = names.ToArray();
-            return nameArray.ToList();
+            return names.ToList();
         }
 
         // ToArray
@@ -35,8 +34,7 @@ namespace LINQ_Tutorial
         public static string[] LinqToArray(List<string> names)
         {
             // Tömbbé alakítja az eredeti collectiont
-            var nameArray = names.AsEnumerable().ToArray();
-            return nameArray;
+            return names.AsEnumerable().ToArray();
         }
 
         // ToDictionary
@@ -44,6 +42,7 @@ namespace LINQ_Tutorial
         public static void LinqToDictionary(List<User> users)
         {
             // Egy collectionből dictionary-t készít
+            // A felhasználók Id-ja lesz a kulcs (key), maguk a felhasználók pedig az érték (value).
             IDictionary<Guid, User> usersDictionary = users.ToDictionary(u => u.Id);
         }
     }

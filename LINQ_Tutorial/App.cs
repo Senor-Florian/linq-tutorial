@@ -1,14 +1,10 @@
 ﻿using LINQ_Tutorial.MockData;
 using System;
-using System.Collections.Generic;
 
 namespace LINQ_Tutorial
 {
 
     public class App {
-
-        static List<int> roles = new List<int>();
-        static List<string> userNames = new List<string>();
 
         public static void Main(string[] args)
         {
@@ -204,8 +200,6 @@ namespace LINQ_Tutorial
             #endregion
 
             #region Zip
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------------------------------------------");
             Console.WriteLine("<<< 15 ZIP >>>");
             Console.WriteLine("<< 15.1 ZIP >>");
             Zip.LinqZip(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());

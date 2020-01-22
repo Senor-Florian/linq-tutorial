@@ -20,8 +20,8 @@ namespace LINQ_Tutorial
         public static void LinqSelectMany(List<User> users)
         {
             // Akkor használatos, ha egy collection elemei collection property-t tartalmaznak, és ezen
-            // property-k tartalmát akarjuk egy collection-be tenni
-            // Példa: az összes felhasználó összes hobbiját egy listába helyezi
+            // property-k tartalmát akarjuk egy collection-be tenni.
+            // Példa: az összes felhasználó összes hobbiját egy listába helyezi.
             var hobbies = users.SelectMany(u => u.Hobbies);
         }
 

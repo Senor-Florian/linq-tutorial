@@ -1,5 +1,4 @@
 ﻿using LINQ_Tutorial.MockData;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,10 +10,10 @@ namespace LINQ_Tutorial
         // Groups elements of a sequence that share a common attribute
         public static void LinqGroupBy(List<User> users)
         {
-            // Csoportosít egy collection-t a megadott property alapján
+            // Csoportosít egy collection-t a megadott property alapján.
             // Példa: a felhasználók csoportosítva lettek role alapján
             // olyan adathalmazt eredményezve, melynek minden eleme rendelkezik egy kulccsal, aminek értéke a csoportosítást meghatározó property (role) éréke,
-            // illetve egy collection-t, amiben a csoportosított elemek (felhasználók) vannak
+            // illetve egy collection-t, amiben a csoportosított elemek (felhasználók) vannak.
             var groupedUsers = users.GroupBy(u => u.UserRole);
         }
 

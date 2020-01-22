@@ -10,7 +10,7 @@ namespace LINQ_Tutorial
         // Arranges the elements of the collection in ascending or descending order
         public static void LinqOrderBy(List<User> users)
         {
-            // Rendezi az elemeket egy vag több szempont szerint
+            // Rendezi az elemeket egy vagy több szempont szerint
             // OrderBy: rendez egy szempont szerint
             // ThenBy: az előző rendezés szerint azonos pozicióban lévő elemeket tovább rendezi egy újabb szempont szerint
             var sortedUsers = users.OrderBy(u => u.UserRole.ToString())
@@ -32,6 +32,6 @@ namespace LINQ_Tutorial
         // Gyakorlás
 
         // 1.
-        // Rendezzük a felhasználókat először név szerint növekvő, majd születési dátum szerint csökkenő sorrendbe.
+        // Rendezzük a felhasználókat először név szerint növekvő, majd születési dátum szerint csökkenő sorrendben.
     }
 }

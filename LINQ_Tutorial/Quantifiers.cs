@@ -9,7 +9,7 @@ namespace LINQ_Tutorial
         // Returns with a bool, checks if all the elements in a sequence satisfies the specified condition 
         public static void LinqAll(List<int> integers)
         {
-            // True-val tér vissza, ha a collection minden elemére igaz a megadott feltétel, egyébként false
+            // True-val tér vissza, ha a collection minden elemére igaz a megadott feltétel, egyébként false.
             var allPositives = integers.All(i => i > 0);
         }
 
@@ -17,8 +17,8 @@ namespace LINQ_Tutorial
         // Returns with a bool, checks if any of the elements in a sequence satisfies the specified condition 
         public static void LinqAny(List<int> integers)
         {
-            // True-val tér vissza, ha a collection bármely elemére igaz a megadott feltétel, egyébként false
-            // Ha nics feltétel megadva, akkor arra vizsgál, hogy van-e elem a collection-ben
+            // True-val tér vissza, ha a collection bármely elemére igaz a megadott feltétel, egyébként false.
+            // Ha nincs feltétel megadva, akkor arra vizsgál, hogy van-e elem a collection-ben.
             var isAnyNegative = integers.Any(i => i < 0);
         }
 

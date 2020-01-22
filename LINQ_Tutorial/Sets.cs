@@ -48,11 +48,11 @@ namespace LINQ_Tutorial
         // Gyakorlás
 
         // 1.
-        // Van egy bizonylat listánk (string lista), amibe véletlenül többször kerültek azonos sorszámú bizonylatok
+        // Van egy bizonylat listánk (string lista), amibe véletlenül többször kerültek azonos sorszámú bizonylatok.
         // Adjunk vissza egy olyan listát, amiben a számlák csak egyszer szerepelnek.
 
         // 2.
-        // Van két integer listánk, az egyikben páros számok, a másikban négyzetszámok vannak
-        // Szükségünk van egy olyan listára, ami a két előbbi listából összeszedi a páros négyzetszámokat
+        // Van két integer listánk, az egyikben páros számok, a másikban négyzetszámok vannak.
+        // Szükségünk van egy olyan listára, ami a két előbbi listából összeszedi a páros négyzetszámokat.
     }
 }
