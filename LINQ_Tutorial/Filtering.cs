@@ -17,18 +17,10 @@ namespace LINQ_Tutorial
 
         // Where
         // Returns values from the collection based on a predicate function
-        public static void LinqWhere(List<User> users)
+        public static void LinqWhere(IEnumerable<User> users)
         {
             // Visszaad egy olyan collectiont, ami a megadott feltételnek megfelelő elemeket tartalmazza az eredeti collectionből
             var filteredUsers = users.Where(u => u.UserRole == UserRole.DOCTOR);
         }
-
-        // Gyakorlás
-
-        // 1.
-        // Adjuk vissza azokat a felhasználókat, akik 1980-01-01 után születtek.
-
-        // 2.
-        // Adjuk vissza azokat a felhasználókat, akiknek 2-nél több hobbija van.
     }
 }

@@ -15,11 +15,5 @@ namespace LINQ_Tutorial
             var filtered = integers.DefaultIfEmpty();
             // var filtered = integers.DefaultIfEmpty(100); => ha üres a lista, akkor visszaad egy listát, aminek egyetlen eleme a 100
         }
-
-        // Gyakorlás
-
-        // 1.
-        // Írjunk egy olyan metódust, ami vár egy felhasználó listát. Ha a lista nem üres, akkor adjunk vissza egy új listát
-        // az eredeti elemeivel, egyébként pedig egy egy elmeű listát, mely egy "Artotrogus Eburnus" nevű felhasználót tartalmaz.
     }
 }

@@ -8,7 +8,7 @@ namespace LINQ_Tutorial
     {
         // Join
         // Joins two sequences (collections) based on a key and returns a resulted sequence
-        public static void LinqJoin(List<User> users, List<Institution> institutions)
+        public static void LinqJoin(IEnumerable<User> users, IEnumerable<Institution> institutions)
         {
             // Két collection-t összekapcsol egy kulcs alapján.
             // Példa: a felhasználókat összekapcsolja a hozzájuk tartozó intéznménnyel, és visszaad egy olyan anonymous object
@@ -18,18 +18,12 @@ namespace LINQ_Tutorial
 
         // GroupJoin
         // Joins two sequences based on key and groups the result by matching key and then returns the collection of grouped result and key
-        public static void LinqGroupJoin(List<User> users, List<Institution> institutions)
+        public static void LinqGroupJoin(IEnumerable<User> users, IEnumerable<Institution> institutions)
         {
             // Két collection-t összekapcsol egy kulcs alapján, és csoportosít (group).
             // Példa: az intézményeket összekapcsolja a hozzájuk tartozó felhasználókkal (felhasználó collection),
             // és visszaad egy olyan listát, amely tartalmazza az intézmények neveit és egy listában az ott dolgozó felhasználókat.
             var groupJoin = institutions.GroupJoin(users, i => i.Id, u => u.InstitutionID, (i, u) => new { i.Name, u });
         }
-
-        // Gyakorlás
-
-        // 1.
-        // Kapcsoljuk össze azokat a felhasználókat a címükkel, akiknek van AddressId-ja, és adjuk
-        // vissza egy olyan collectiont, ami tartalmazza felhasználók nevét, a címük országát és megyéjét.
     }
 }

@@ -8,7 +8,7 @@ namespace LINQ_Tutorial
     {
         // GroupBy
         // Groups elements of a sequence that share a common attribute
-        public static void LinqGroupBy(List<User> users)
+        public static void LinqGroupBy(IEnumerable<User> users)
         {
             // Csoportosít egy collection-t a megadott property alapján.
             // Példa: a felhasználók csoportosítva lettek role alapján
@@ -21,16 +21,11 @@ namespace LINQ_Tutorial
         // Returns groups of elements based on some key value
         // Inserts elements into a Lookup (a one-to-many dictionary) based on a key selector function
         // ToLookup is the same as GroupBy, the only difference is the execution of GroupBy is deferred whereas ToLookup execution is immediate
-        public static void LinqToLookUp(List<User> users)
+        public static void LinqToLookUp(IEnumerable<User> users)
         {
             // Működésben nagyon hasonló a GroupBy-hoz
             // Különbség: a ToLookup kiértékelése azonnali, a GroupBy kiértékelése késleltetett 
             ILookup<UserRole, User> groupedUsers = users.ToLookup(u => u.UserRole);
         }
-
-        // Gyakorlás
-
-        // 1.
-        // Csoportosítsuk a felhasználókat születési évük szerint.
     }
 }

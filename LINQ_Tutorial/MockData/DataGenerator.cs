@@ -6,7 +6,7 @@ namespace LINQ_Tutorial.MockData
 {
     public class DataGenerator
     {
-        public static List<User> GetUsers()
+        public static IEnumerable<User> GetUsers()
         {
             return new List<User>
             {
@@ -80,7 +80,7 @@ namespace LINQ_Tutorial.MockData
                     FullName = "Dionysia Augustalis",
                     LoginName = "dionysia",
                     UserRole = UserRole.DATA_PROVIDER,
-                    DateOfBirth = new DateTime(1988, 02, 17),
+                    DateOfBirth = new DateTime(1988, 05, 02),
                     Hobbies = new List<string>() { "gaming", "3D printing" }
                 },
                 new User {
@@ -96,7 +96,7 @@ namespace LINQ_Tutorial.MockData
             };
         }
 
-        public static List<Address> GetAddresses()
+        public static IEnumerable<Address> GetAddresses()
         {
             return new List<Address>
             {
@@ -121,7 +121,7 @@ namespace LINQ_Tutorial.MockData
             };
         }
 
-        public static List<Institution> GetInstitutions()
+        public static IEnumerable<Institution> GetInstitutions()
         {
             return new List<Institution> {
                 new Institution() {
@@ -139,7 +139,7 @@ namespace LINQ_Tutorial.MockData
             };
         }
 
-        public static List<string> GetNames()
+        public static IEnumerable<string> GetNames()
         {
             return new List<string> {
                 "Geffrei Neubert",
@@ -155,24 +155,35 @@ namespace LINQ_Tutorial.MockData
             };
         }
 
-        public static List<int> GetIntegerList1()
+        public static IEnumerable<int> GetIntegerList1()
         {
             return new List<int> { 4, 6, 1, 34, -7, -23, 6, 8, 8, -57 };
         }
 
-        public static List<int> GetIntegerList2()
+        public static IEnumerable<int> GetIntegerList2()
         {
             return new List<int> { 4, 10, 45, 11, 7, -49, 23, 8, 98 };
         }
 
-        public static List<int> GetIntegerList3()
+        public static IEnumerable<int> GetIntegerList3()
         {
             return new List<int> { 4, 10, 45, 11, 7, -49, 23, 8, 98 };
+        }
+
+        public static IEnumerable<int> GetIntegerList4()
+        {
+            return new List<int> { 4, 6, 8, 36, 64, 88, 100, 108 };
+        }
+
+        public static IEnumerable<int> GetIntegerList5()
+        {
+            return new List<int> { 9, 25, 36, 49, 64, 81, 100, 121 };
         }
 
         public static IList GetMixedList()
         {
-            return new ArrayList {
+            return new ArrayList
+            {
                 45,
                 "eloquence",
                 78,
@@ -180,6 +191,21 @@ namespace LINQ_Tutorial.MockData
                 new User {
                     FullName = "Virus Kunz"
                 }
+            };
+        }
+
+        public static IEnumerable<string> GetInvoices()
+        {
+            return new List<string>
+            {
+                "AGDF326534",
+                "5234GSGBNX",
+                "AGDF326534",
+                "KDFHDF43GF",
+                "CBSDGS35AG",
+                "LFGHBD3534",
+                "KDFHDF43GF",
+                "CAQQ42HFCN"
             };
         }
     }

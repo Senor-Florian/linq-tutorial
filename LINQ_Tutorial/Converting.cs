@@ -8,14 +8,14 @@ namespace LINQ_Tutorial
     public class Converting
     {
         // AsEnumberable
-        public static IEnumerable<int> LinqAsEnumberable(List<int> integers)
+        public static IEnumerable<int> LinqAsEnumberable(IEnumerable<int> integers)
         {
             // IEnumberable-t ad vissza az eredeti helyett 
             return integers.AsEnumerable();
         }
 
         // AsQueryable
-        public static IQueryable<int> LinqAsQueryable(List<int> integers)
+        public static IQueryable<int> LinqAsQueryable(IEnumerable<int> integers)
         {
             // IQueryable-t ad vissza az eredeti helyett 
             return integers.AsQueryable();
@@ -31,7 +31,7 @@ namespace LINQ_Tutorial
 
         // ToArray
         // Converts collection to array
-        public static string[] LinqToArray(List<string> names)
+        public static string[] LinqToArray(IEnumerable<string> names)
         {
             // Tömbbé alakítja az eredeti collectiont
             return names.AsEnumerable().ToArray();
@@ -39,7 +39,7 @@ namespace LINQ_Tutorial
 
         // ToDictionary
         // Puts elements into a Dictionary based on key selector function
-        public static void LinqToDictionary(List<User> users)
+        public static void LinqToDictionary(IEnumerable<User> users)
         {
             // Egy collectionből dictionary-t készít
             // A felhasználók Id-ja lesz a kulcs (key), maguk a felhasználók pedig az érték (value).

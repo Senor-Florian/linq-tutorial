@@ -9,7 +9,7 @@ namespace LINQ_Tutorial
     {
         // ElementAt/ElementAtOrDefault
         // Returns the element at a specified index in a collection (or a default value if the index is out of range)
-        public static void LinqElementAt(List<int> integers)
+        public static void LinqElementAt(IEnumerable<int> integers)
         {
             // Az adott indexű elemet adja vissza a listából, hibát dob ha nincs ilyen index
             var firstElement = integers.ElementAt(0);
@@ -19,7 +19,7 @@ namespace LINQ_Tutorial
 
         // First/FirstOrDefault
         // Returns the first element of a collection, or the first element that satisfies a condition (or a default value if no such element exists.)
-        public static void LinqFirst(List<int> integers, List<User> users)
+        public static void LinqFirst(IEnumerable<int> integers, IEnumerable<User> users)
         {
             // Visszaadja az első olyan elemet, amely megfelel a feltételnek
             // Hibát dob, ha nem talál ilyet (üres a lista, vagy nem felel meg a feltételnek egy elem se)
@@ -31,7 +31,7 @@ namespace LINQ_Tutorial
 
         // Last/LastOrDefault
         // Returns the last element of a collection, or the last element that satisfies a condition (or a default value if no such element exists)
-        public static void LinqLast(List<int> integers, List<User> users)
+        public static void LinqLast(IEnumerable<int> integers, IEnumerable<User> users)
         {
             // Visszaadja az utolsó olyan elemet, amely megfelel a feltételnek
             // Hibát dob, ha nem talál ilyet (üres a lista, vagy nem felel meg a feltételnek egy elem se)            
@@ -43,7 +43,7 @@ namespace LINQ_Tutorial
 
         // Single/SingleOrDefault
         // Returns the only element from a collection, or the only element that satisfies a condition (or a default value if no such element exists) 
-        public static void LinqSingle(List<User> users, Guid id, List<int> integers)
+        public static void LinqSingle(IEnumerable<User> users, Guid id, IEnumerable<int> integers)
         {
             // Visszaadja az egyetlen olyan elemet, amelyre teljesül a feltétel
             // Hibát dob, ha üres a lista, egyik elemre se teljesül a fetétel, vagy több elemre is teljesül
@@ -53,14 +53,5 @@ namespace LINQ_Tutorial
             // Hibát dob, ha több elemre teljesül a feltétel
             var integerOverOneHundred = integers.SingleOrDefault(i => i > 100);
         }
-
-        // Gyakorlás
-
-        // 1.
-        // Adjuk vissza egy string lista 20. elemét úgy, hogy az ne dobjon hibát, ha nincs ilyen index
-
-        // 2.
-        // Egy felhasználó listából keressük ki a megfelelő azonosítójú (Id) felhasználót
-        // Ne dobjon hibát az alkalmazás, ha nincs ilyen felhasználó
     }
 }

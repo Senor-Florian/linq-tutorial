@@ -1,5 +1,7 @@
 ﻿using LINQ_Tutorial.MockData;
 using System;
+using System.Collections;
+using System.Linq;
 
 namespace LINQ_Tutorial
 {
@@ -204,6 +206,44 @@ namespace LINQ_Tutorial
             Console.WriteLine("<< 15.1 ZIP >>");
             Zip.LinqZip(DataGenerator.GetIntegerList1(), DataGenerator.GetIntegerList2());
             Console.WriteLine("-------------------------------------------------------------------------");
+            #endregion
+
+            Console.ReadKey();
+
+            #region Gyakorló feladatok
+
+            Practice.SortUsers(DataGenerator.GetUsers());
+
+            Practice.FilterInvoices(DataGenerator.GetInvoices());
+
+            Practice.GetEvenSquareNumbers(DataGenerator.GetIntegerList4(), DataGenerator.GetIntegerList5());
+
+            Practice.GetTwentiethElement(DataGenerator.GetIntegerList1());
+
+            Practice.GetUserById(new Guid("948068b8-7b67-4298-bafa-ac7227663ed5"), DataGenerator.GetUsers());
+
+            Practice.ConcatenateNames(DataGenerator.GetNames());
+
+            Practice.CountLongNames(DataGenerator.GetNames());
+
+            Practice.GetOldesUserDateOfBirth(DataGenerator.GetUsers());
+
+            Practice.GetUsersAfter1980(DataGenerator.GetUsers());
+
+            Practice.GetUsersWithManyHobbies(DataGenerator.GetUsers());
+
+            Practice.AreThereUsersBefore1970(DataGenerator.GetUsers());
+
+            Practice.GetProjectedUsers(DataGenerator.GetUsers());
+
+            Practice.PaginateUsers(DataGenerator.GetUsers(), 2, 3);
+
+            Practice.GetUsersWithAddress(DataGenerator.GetUsers(), DataGenerator.GetAddresses());
+
+            Practice.GroupUsersByBirthYear(DataGenerator.GetUsers());
+
+            Practice.GetDefaultUser(Enumerable.Empty<User>());
+
             #endregion
 
             Console.ReadKey();

@@ -1,4 +1,5 @@
 ﻿using LINQ_Tutorial.MockData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +9,7 @@ namespace LINQ_Tutorial
     {
         // OrderBy/OrderByDescending/ThenBy/ThenByDescending
         // Arranges the elements of the collection in ascending or descending order
-        public static void LinqOrderBy(List<User> users)
+        public static void LinqOrderBy(IEnumerable<User> users)
         {
             // Rendezi az elemeket egy vagy több szempont szerint
             // OrderBy: rendez egy szempont szerint
@@ -27,11 +28,6 @@ namespace LINQ_Tutorial
         {
             // Megfordítja az elemek sorrendjét
             integers.Reverse();
-        }
-
-        // Gyakorlás
-
-        // 1.
-        // Rendezzük a felhasználókat először név szerint növekvő, majd születési dátum szerint csökkenő sorrendben.
+        }        
     }
 }
